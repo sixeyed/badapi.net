@@ -35,7 +35,6 @@ namespace Sixeyed.BadApi.Web.Areas.HelpPage
         {
             config.SetDocumentationProvider(new XmlDocumentationProvider(HttpContext.Current.Server.MapPath("~/App_Data/Sixeyed.BadApi.Web.Documentation.xml")));
 
-           
             // Extend the following to provide factories for types not handled automatically (those lacking parameterless
             // constructors) or for which you prefer to use non-default property values. Line below provides a fallback
             // since automatic handling will fail and GeneratePageResult handles only a single type.

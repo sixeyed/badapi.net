@@ -1,10 +1,25 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>badapi.net - a misbehaving REST API</title>
+    <title>@ViewBag.Title</title>
     @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        (function () {
+            var link_element = document.createElement("link"),
+                s = document.getElementsByTagName("script")[0];
+            if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
+                link_element.href = "http:";
+            }
+            link_element.href += "//fonts.googleapis.com/css?family=Ubuntu:400,700";
+            link_element.rel = "stylesheet";
+            link_element.type = "text/css";
+            s.parentNode.insertBefore(link_element, s);
+        })();
+
+    </script>
 </head>
 <body>
     @RenderBody()
