@@ -140,6 +140,18 @@ body {
     text-decoration: none;
 }
 
+.navbar-inverse{
+    background-color: #A72F00;
+    color: #FFBEA4;
+}
+
+.navbar{
+    min-height: 35px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
 
 /* CSS - Cascading Style Sheet */
 /* Palette color codes */
