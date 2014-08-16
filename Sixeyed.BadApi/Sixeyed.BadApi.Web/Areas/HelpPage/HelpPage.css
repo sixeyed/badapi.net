@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    padding-left: 10px;
     background-color: #FF4900;
     color: #FFBEA4;       
 }
@@ -28,6 +29,7 @@ body {
 	 font-size: 76px;
      line-height: 70px;
      color: #A72F00;
+     margin-bottom: 20 px;
 }
 
 
@@ -121,13 +123,18 @@ body {
 
 .help-page h2,
 .help-page .h2 {
-    color: #FF9970;
-    font-size: 24px;
+    font-size: 40px;
+     color: #FFBEA4;
+}
+
+.bg-light{
+    background-color: #FFBEA4;
+    margin-bottom: 5px;
 }
 
 .help-page h3,
 .help-page .h3 {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #body.help-page {

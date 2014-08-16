@@ -182,6 +182,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\GitHub_Logo-199x82.png" />
+    <Content Include="Content\gwb-logo_261x82.png" />
+    <Content Include="Content\postman-logo-250.png" />
+    <Content Include="Content\thumbs-down_200x170.png" />
+    <Content Include="Content\thumbs-down_400x340.png" />
     <Content Include="favicon-160x160.png" />
     <Content Include="favicon-16x16.png" />
     <Content Include="favicon-196x196.png" />

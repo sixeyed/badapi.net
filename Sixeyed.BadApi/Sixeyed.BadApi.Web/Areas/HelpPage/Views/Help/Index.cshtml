@@ -14,22 +14,46 @@
 
 <link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
 <header class="help-page">
-    <div class="content-wrapper">
-        <div class="float-left">
-            <h1>@ViewBag.Title</h1>
-        </div>
-    </div>
+        <div class="row">
+            <div class="col-md-2" style="min-width: 205px">
+                <img src="~/Content/thumbs-down_200x170.png" alt="badapi.net" />
+            </div>
+            <div class="col-md-7" style="min-width: 400px">
+                <h1>@ViewBag.Title</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>badapi.net is a REST API with badly-behaved endpoints you can use for testing.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" style="min-width: 267px">
+                <a href="https://github.com/sixeyed/badapi.net"><img src="~/Content/GitHub_Logo-199x82.png" alt="Source hosted on GitHub" class="img-rounded bg-light"></a>
+                <a href="https://www.getpostman.com/collections/f8351e64720d02b5f068"><img src="~/Content/postman-logo-250.png" alt="Postman client collection" class="img-rounded bg-light"></a>
+                <a href="http://geekswithblogs.net/EltonStoneman/category/19292.aspx"><img src="~/Content/gwb-logo_261x82.png" alt="Blog posts" class="img-rounded bg-light"></a>
+            </div>
 </header>
 <div id="body" class="help-page">
-    <section class="featured">
-        <div class="content-wrapper">
-            <h2>badapi.net is a REST API with badly behaved endpoints you can use for testing.</h2>
-        </div>
-    </section>
     <section class="content-wrapper main-content clear-fix">
         @foreach (var group in apiGroups)
         {
-            @Html.DisplayFor(m => group, "ApiGroup")
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.DisplayFor(m => group, "ApiGroup")
+                </div>
+            </div>
         }
     </section>
 </div>
+<footer>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="https://github.com/sixeyed/badapi.net"><img src="~/Content/GitHub_Logo-199x82.png" alt="Source hosted on GitHub" class="img-rounded bg-light"></a>
+            </div>
+        <div class="col-md-4">
+            <a href="https://www.getpostman.com/collections/f8351e64720d02b5f068"><img src="~/Content/postman-logo-250.png" alt="Postman client collection" class="img-rounded bg-light"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://geekswithblogs.net/EltonStoneman/category/19292.aspx"><img src="~/Content/gwb-logo_261x82.png" alt="Blog posts" class="img-rounded bg-light"></a>
+            </div>
+    </div>
+</footer>
