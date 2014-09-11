@@ -171,6 +171,7 @@
     <Compile Include="Models\Delayed.cs" />
     <Compile Include="Models\Enums\BadServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spec\IResponseMessageController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="apple-touch-icon-114x114.png" />

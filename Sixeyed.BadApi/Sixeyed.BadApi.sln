@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7C7380
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3633FA9A-A7DC-4D60-8D87-91DB1364D6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.BadApi.AcceptanceTests", "Sixeyed.BadApi.AcceptanceTests\Sixeyed.BadApi.AcceptanceTests.csproj", "{7D7F3BF6-55C5-439A-90E4-85DE39813086}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,8 +26,15 @@ Global
 		{ECF44704-A4AE-4B6F-8B26-9DEC4692944C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECF44704-A4AE-4B6F-8B26-9DEC4692944C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECF44704-A4AE-4B6F-8B26-9DEC4692944C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D7F3BF6-55C5-439A-90E4-85DE39813086} = {3633FA9A-A7DC-4D60-8D87-91DB1364D6BA}
 	EndGlobalSection
 EndGlobal

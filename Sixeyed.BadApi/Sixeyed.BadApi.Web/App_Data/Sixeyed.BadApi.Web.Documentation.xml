@@ -506,7 +506,7 @@
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.InternalServerErrorController.GetInternalServerError">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.InternalServerErrorController.Get">
             <summary>
             Returns 500: Internal Server Error
             </summary>
@@ -516,7 +516,7 @@
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotFoundController.GetNotFound">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.NotFoundController.Get">
             <summary>
             Returns 404: Not Found
             </summary>
@@ -526,7 +526,7 @@
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.ForbiddeController.GetForbidden">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.ForbiddeController.Get">
             <summary>
             Returns 403: Forbidden
             </summary>
@@ -536,7 +536,7 @@
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.ConflictController.GetConflict">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.ConflictController.Get">
             <summary>
             Returns 409: Conflict
             </summary>
@@ -546,7 +546,7 @@
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.UnauthorizedController.GetUnauthorized">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.UnauthorizedController.Get">
             <summary>
             Returns 401: Unauthorized
             </summary>
@@ -556,7 +556,7 @@
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.ServiceUnavailableController.GetServiceUnavailable">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.ServiceUnavailableController.Get">
             <summary>
             Returns 503: Service Unavailable
             </summary>
