@@ -153,6 +153,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="ControllerSelectors\DomainNameControllerSelector.cs" />
+    <Compile Include="Controllers\BadServerController.cs" />
+    <Compile Include="Controllers\BadRequestController.cs" />
+    <Compile Include="Controllers\InternalServerErrorController.cs" />
+    <Compile Include="Controllers\NotFoundController.cs" />
+    <Compile Include="Controllers\ForbiddenController.cs" />
+    <Compile Include="Controllers\ConflictController.cs" />
+    <Compile Include="Controllers\UnauthorizedController.cs" />
+    <Compile Include="Controllers\ServiceUnavailableController.cs" />
     <Compile Include="Controllers\NotOkController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\DelayedController.cs" />
@@ -160,6 +169,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Delayed.cs" />
+    <Compile Include="Models\Enums\BadServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

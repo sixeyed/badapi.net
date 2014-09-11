@@ -481,39 +481,89 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="T:Sixeyed.BadApi.Web.Controllers.NotOkController">
+        <member name="T:Sixeyed.BadApi.Web.Controllers.BadServerController">
+            <summary>
+            Bad Server - random bad server response
+            </summary>
+        </member>
+        <member name="M:Sixeyed.BadApi.Web.Controllers.BadServerController.GetAsync">
+            <summary>
+            Equal chance the server will either: be slow (returns 200 after 30 seconds); never respond (actually returns 200 after 5 minutes) ; return 500; return 503
+            </summary>
+        </member>
+        <member name="T:Sixeyed.BadApi.Web.Controllers.BadRequestController">
             <summary>
             Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetInternalServerError">
-            <summary>
-            Returns 500: Internal Server Error
-            </summary>
-        </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetBadRequest">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.BadRequestController.Get">
             <summary>
             Returns 400: BadRequest
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetNotFound">
+        <member name="T:Sixeyed.BadApi.Web.Controllers.InternalServerErrorController">
+            <summary>
+            Not OK - responses which are not 200s
+            </summary>
+        </member>
+        <member name="M:Sixeyed.BadApi.Web.Controllers.InternalServerErrorController.GetInternalServerError">
+            <summary>
+            Returns 500: Internal Server Error
+            </summary>
+        </member>
+        <member name="T:Sixeyed.BadApi.Web.Controllers.NotFoundController">
+            <summary>
+            Not OK - responses which are not 200s
+            </summary>
+        </member>
+        <member name="M:Sixeyed.BadApi.Web.Controllers.NotFoundController.GetNotFound">
             <summary>
             Returns 404: Not Found
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetUnauthorized">
+        <member name="T:Sixeyed.BadApi.Web.Controllers.ForbiddeController">
             <summary>
-            Returns 401: Unauthorized
+            Not OK - responses which are not 200s
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetForbidden">
+        <member name="M:Sixeyed.BadApi.Web.Controllers.ForbiddeController.GetForbidden">
             <summary>
             Returns 403: Forbidden
             </summary>
         </member>
-        <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetConflict">
+        <member name="T:Sixeyed.BadApi.Web.Controllers.ConflictController">
+            <summary>
+            Not OK - responses which are not 200s
+            </summary>
+        </member>
+        <member name="M:Sixeyed.BadApi.Web.Controllers.ConflictController.GetConflict">
             <summary>
             Returns 409: Conflict
+            </summary>
+        </member>
+        <member name="T:Sixeyed.BadApi.Web.Controllers.UnauthorizedController">
+            <summary>
+            Not OK - responses which are not 200s
+            </summary>
+        </member>
+        <member name="M:Sixeyed.BadApi.Web.Controllers.UnauthorizedController.GetUnauthorized">
+            <summary>
+            Returns 401: Unauthorized
+            </summary>
+        </member>
+        <member name="T:Sixeyed.BadApi.Web.Controllers.ServiceUnavailableController">
+            <summary>
+            Not OK - responses which are not 200s
+            </summary>
+        </member>
+        <member name="M:Sixeyed.BadApi.Web.Controllers.ServiceUnavailableController.GetServiceUnavailable">
+            <summary>
+            Returns 503: Service Unavailable
+            </summary>
+        </member>
+        <member name="T:Sixeyed.BadApi.Web.Controllers.NotOkController">
+            <summary>
+            Not OK - responses which are not 200s
             </summary>
         </member>
         <member name="M:Sixeyed.BadApi.Web.Controllers.NotOkController.GetStatusCode(System.String,System.String)">
