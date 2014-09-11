@@ -1,21 +1,12 @@
-﻿using Sixeyed.BadApi.Web.Spec;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Net;
 
 namespace Sixeyed.BadApi.Web.Controllers
 {
-    /// <summary>
-    /// Not OK - responses which are not 200s
-    /// </summary>
-    public class ConflictController : ApiController, IResponseMessageController
+    public class ConflictController : ResponseMessageController
     {
-        /// <summary>
-        /// Returns 409: Conflict
-        /// </summary>
-        public IHttpActionResult Get()
+        public override HttpStatusCode ResponseStatusCode
         {
-            return ResponseMessage(new HttpResponseMessage(HttpStatusCode.Conflict));
+            get { return HttpStatusCode.Conflict; }
         }
     }
 }

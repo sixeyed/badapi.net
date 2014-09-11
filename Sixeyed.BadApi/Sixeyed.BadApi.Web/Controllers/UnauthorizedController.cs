@@ -1,19 +1,12 @@
-﻿using Sixeyed.BadApi.Web.Spec;
-using System.Web.Http;
+﻿using System.Net;
 
 namespace Sixeyed.BadApi.Web.Controllers
 {
-    /// <summary>
-    /// Not OK - responses which are not 200s
-    /// </summary>
-    public class UnauthorizedController : ApiController, IResponseMessageController
+    public class UnauthorizedController : ResponseMessageController
     {
-        /// <summary>
-        /// Returns 401: Unauthorized
-        /// </summary>
-        public IHttpActionResult Get()
+        public override HttpStatusCode ResponseStatusCode
         {
-            return Unauthorized();
+            get { return HttpStatusCode.Unauthorized; }
         }
     }
 }

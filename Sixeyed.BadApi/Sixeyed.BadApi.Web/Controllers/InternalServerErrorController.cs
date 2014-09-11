@@ -1,19 +1,12 @@
-﻿using Sixeyed.BadApi.Web.Spec;
-using System.Web.Http;
+﻿using System.Net;
 
 namespace Sixeyed.BadApi.Web.Controllers
 {
-    /// <summary>
-    /// Not OK - responses which are not 200s
-    /// </summary>
-    public class InternalServerErrorController : ApiController, IResponseMessageController
+    public class InternalServerErrorController : ResponseMessageController
     {
-        /// <summary>
-        /// Returns 500: Internal Server Error
-        /// </summary>
-        public IHttpActionResult Get()
+        public override HttpStatusCode ResponseStatusCode
         {
-            return InternalServerError();
+            get { return HttpStatusCode.InternalServerError; }
         }
     }
 }

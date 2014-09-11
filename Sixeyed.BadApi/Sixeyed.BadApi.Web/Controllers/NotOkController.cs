@@ -6,7 +6,7 @@ using System.Web.Http;
 namespace Sixeyed.BadApi.Web.Controllers
 {
     /// <summary>
-    /// Not OK - responses which are not 200s
+    /// Status - return a specific code and reason
     /// </summary>
     public class NotOkController : ApiController
     {

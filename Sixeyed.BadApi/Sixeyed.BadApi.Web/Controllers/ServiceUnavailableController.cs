@@ -5,17 +5,11 @@ using System.Web.Http;
 
 namespace Sixeyed.BadApi.Web.Controllers
 {
-    /// <summary>
-    /// Not OK - responses which are not 200s
-    /// </summary>
-    public class ServiceUnavailableController : ApiController, IResponseMessageController
+    public class ServiceUnavailableController : ResponseMessageController
     {
-        /// <summary>
-        /// Returns 503: Service Unavailable
-        /// </summary>
-        public IHttpActionResult Get()
+        public override HttpStatusCode ResponseStatusCode
         {
-            return ResponseMessage(new HttpResponseMessage(HttpStatusCode.ServiceUnavailable));
+            get { return HttpStatusCode.ServiceUnavailable; }
         }
     }
 }

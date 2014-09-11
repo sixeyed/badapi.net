@@ -3,6 +3,7 @@
 @using System.Web.Http.Description
 @using System.Collections.ObjectModel
 @using Sixeyed.BadApi.Web.Areas.HelpPage.Models
+@using Sixeyed.BadApi.Web.Spec
 @model Collection<ApiDescription>
 
 @{
@@ -34,7 +35,7 @@
 </header>
 <div id="body" class="help-page">
     <section class="content-wrapper main-content clear-fix">
-        @foreach (var group in apiGroups)
+        @foreach (var group in apiGroups.Where(x => x.Key.ControllerType.GetInterface("IResponseMessageController") == null))
         {
             <div class="row">
                 <div class="col-md-12">
@@ -42,5 +43,28 @@
                 </div>
             </div>
         }
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Not OK - responses which are not 200s</h2>
+
+                <table class="help-page-table">
+                    <thead>
+                        <tr>
+                        <th>Endpoint</th>
+                            <th>Proxy Endpoint</th>
+                        <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var group in apiGroups.Where(x => x.Key.ControllerType.GetInterface("IResponseMessageController") != null))
+                        {
+                            @Html.DisplayFor(m => group, "NotOkApi")
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </section>
 </div>

@@ -1,0 +1,30 @@
+@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using Sixeyed.BadApi.Web.Areas.HelpPage
+@using Sixeyed.BadApi.Web.Areas.HelpPage.Models
+@using Sixeyed.BadApi.Web.Spec
+@model IGrouping<HttpControllerDescriptor, ApiDescription>
+
+@{
+    var controllerDocumentation = ViewBag.DocumentationProvider != null ? 
+        ViewBag.DocumentationProvider.GetDocumentation(Model.Key) : 
+        null;
+}
+
+  
+    @foreach (var api in Model)
+    {
+        var type = Model.Key.ControllerType;
+        var controller = (IResponseMessageController)Activator.CreateInstance(type);
+        var statusDescription = controller.ResponseStatusCode;
+        var statusCode = (int)statusDescription;
+        var domainUrl =  "http://" + statusCode + ".badapi.net";
+        <tr>
+            <td class="api-name">GET http://badapi.net/@api.RelativePath.ToLower()</td>
+            <td class="api-name">GET @domainUrl</td>
+            <td class="api-documentation">
+                <p>Returns @statusCode: @statusDescription</p>
+            </td>
+        </tr>
+    }

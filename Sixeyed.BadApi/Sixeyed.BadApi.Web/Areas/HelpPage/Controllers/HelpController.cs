@@ -28,7 +28,8 @@ namespace Sixeyed.BadApi.Web.Areas.HelpPage.Controllers
         public ActionResult Index()
         {
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
-            return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
+            var descriptions = Configuration.Services.GetApiExplorer().ApiDescriptions;
+            return View(descriptions);
         }
 
         public ActionResult Api(string apiId)

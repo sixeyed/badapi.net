@@ -1,21 +1,12 @@
-﻿using Sixeyed.BadApi.Web.Spec;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Net;
 
 namespace Sixeyed.BadApi.Web.Controllers
 {
-    /// <summary>
-    /// Not OK - responses which are not 200s
-    /// </summary>
-    public class ForbiddeController : ApiController, IResponseMessageController
+    public class ForbiddenController : ResponseMessageController
     {
-        /// <summary>
-        /// Returns 403: Forbidden
-        /// </summary>
-        public IHttpActionResult Get()
+        public override HttpStatusCode ResponseStatusCode
         {
-            return ResponseMessage(new HttpResponseMessage(HttpStatusCode.Forbidden));
+            get { return HttpStatusCode.Forbidden; }
         }
     }
 }
