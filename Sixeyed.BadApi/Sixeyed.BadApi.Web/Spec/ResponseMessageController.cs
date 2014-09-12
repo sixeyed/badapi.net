@@ -9,7 +9,12 @@ namespace Sixeyed.BadApi.Web.Controllers
     {
         public abstract HttpStatusCode ResponseStatusCode { get; }
 
-        public IHttpActionResult Get()
+        [HttpGet]
+        [HttpPost]
+        [HttpPut]
+        [HttpDelete]
+        [HttpHead]
+        public IHttpActionResult Any()
         {
             return ResponseMessage(new HttpResponseMessage(ResponseStatusCode));
         }

@@ -21,8 +21,8 @@
         var statusCode = (int)statusDescription;
         var domainUrl =  "http://" + statusCode + ".badapi.net";
         <tr>
-            <td class="api-name">GET http://badapi.net/@api.RelativePath.ToLower()</td>
-            <td class="api-name">GET @domainUrl</td>
+            <td class="api-name">@api.HttpMethod.Method http://badapi.net/@api.RelativePath.ToLower()</td>
+            <td class="api-name">@api.HttpMethod.Method @domainUrl</td>
             <td class="api-documentation">
                 <p>Returns @statusCode: @statusDescription</p>
             </td>

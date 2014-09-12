@@ -5,7 +5,7 @@ namespace Sixeyed.BadApi.Web.Spec
 {
     public interface IResponseMessageController
     {
-        IHttpActionResult Get();
+        IHttpActionResult Any();
 
         HttpStatusCode ResponseStatusCode { get;  }
     }
