@@ -9,6 +9,8 @@ namespace Sixeyed.BadApi.Web.ControllerSelectors
 {
     public class DomainNameControllerSelector : DefaultHttpControllerSelector
     {
+        private static Random _Random = new Random();
+
         private HttpConfiguration _config;
 
         public DomainNameControllerSelector(HttpConfiguration config)
@@ -19,11 +21,29 @@ namespace Sixeyed.BadApi.Web.ControllerSelectors
 
         public override HttpControllerDescriptor SelectController(HttpRequestMessage request)
         {
-            string controllerName = string.Empty;
+            string controllerName = string.Empty;            
+            var host = request.RequestUri.Host;
+
+            //check for failure host names:
+            if (host.StartsWith("transient."))
+            {
+                if (_Random.Next(1, 10) < 4)
+                {
+                    controllerName = "Ok";
+                }
+                else
+                {
+                    controllerName = "ServiceUnavailable";
+                }                        
+            }
+
+            else if (host.StartsWith("permanent."))
+            {
+                controllerName = "BadRequest";
+            }
 
             //if the request starts with a status code (e.g. 400.badapi.net), lookup the status name:
-            var host = request.RequestUri.Host;
-            if (host.IndexOf('.') == 3)
+            else if (host.IndexOf('.') == 3)
             {
                 var statusCode = 0;
                 if (int.TryParse(host.Substring(0, 3), out statusCode))

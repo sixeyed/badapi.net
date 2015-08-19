@@ -7,13 +7,19 @@ namespace Sixeyed.BadApi.AcceptanceTests.Steps
     [Binding]
     public class ProxyEndpointSteps : ApiStepBase
     {
-        private int _statusCode;
+        private string _proxyPrefix;
         private string _domainToProxy;
 
         [Given(@"I want to test my client handles a (.*): ""(.*)"" response")]
         public void GivenIWantToTestMyClientHandlesABadRequestResponse(int statusCode, string status)
         {
-            _statusCode = statusCode;
+            _proxyPrefix = statusCode.ToString();
+        }
+
+        [Given(@"I want to test my client handles a ""(.*)"" failure")]
+        public void GivenIWantToTestMyClientHandlesAFailure(string failureType)
+        {
+            _proxyPrefix = failureType;
         }
 
         [Given(@"I have proxied ""(.*)"" to point to badapi\.net")]
@@ -27,7 +33,7 @@ namespace Sixeyed.BadApi.AcceptanceTests.Steps
         {
             //simulate the proxy redirect by replacing the URL:
             var domain = ConfigurationManager.AppSettings["api.domain"];
-            RequestUrl = originalUrl.Replace(_domainToProxy, string.Format("{0}.{1}", _statusCode, domain));
+            RequestUrl = originalUrl.Replace(_domainToProxy, string.Format("{0}.{1}", _proxyPrefix, domain));
             GetResponse();
         }
 
@@ -35,6 +41,13 @@ namespace Sixeyed.BadApi.AcceptanceTests.Steps
         public void ThenTheAPIReturnsWithResponseCode(int expectedStatusCode)
         {
             Assert.AreEqual(expectedStatusCode, (int)ResponseMessage.StatusCode);
+        }
+
+        [Then(@"the API returns with response code ""(.*)"" or ""(.*)""")]
+        public void ThenTheAPIReturnsWithResponseCodeOr(int expectedStatusCode1, int expectedStatusCode2)
+        {
+            var responseStatuseCode = (int)ResponseMessage.StatusCode;
+            Assert.IsTrue(responseStatuseCode == expectedStatusCode1 || responseStatuseCode == expectedStatusCode2);
         }
 
         [Then(@"the response does not contain a body")]

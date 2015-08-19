@@ -51,3 +51,24 @@ Scenario: Unauthorized
 	When I make a GET request to "http://api.myproduct.net/some/path?with=query"
 	Then the API returns with response code '401'
 	And the response does not contain a body
+
+Scenario: OK Request
+	Given I want to test my client handles a 200: "OK" response
+	And I have proxied "api.myproduct.net" to point to badapi.net
+	When I make a GET request to "http://api.myproduct.net/some/path?with=query"
+	Then the API returns with response code '200'
+	And the response does not contain a body
+
+Scenario: Transient Failure
+	Given I want to test my client handles a "transient" failure
+	And I have proxied "api.myproduct.net" to point to badapi.net
+	When I make a GET request to "http://api.myproduct.net/some/path?with=query"
+	Then the API returns with response code "200" or "503"
+	And the response does not contain a body
+
+Scenario: Permanent Failure
+	Given I want to test my client handles a "permanent" failure
+	And I have proxied "api.myproduct.net" to point to badapi.net
+	When I make a GET request to "http://api.myproduct.net/some/path?with=query"
+	Then the API returns with response code '400'
+	And the response does not contain a body

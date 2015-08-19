@@ -15,13 +15,14 @@
     <AssemblyName>Sixeyed.BadApi.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -160,6 +161,7 @@
     <Compile Include="Controllers\NotFoundController.cs" />
     <Compile Include="Controllers\ForbiddenController.cs" />
     <Compile Include="Controllers\ConflictController.cs" />
+    <Compile Include="Controllers\OkController.cs" />
     <Compile Include="Controllers\UnauthorizedController.cs" />
     <Compile Include="Controllers\ServiceUnavailableController.cs" />
     <Compile Include="Controllers\NotOkController.cs" />
@@ -288,7 +290,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>11557</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://badapi.local</IISUrl>
+          <IISUrl>http://localhost:11557/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
