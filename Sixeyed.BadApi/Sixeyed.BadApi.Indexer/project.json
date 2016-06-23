@@ -1,0 +1,23 @@
+﻿{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+        "type": "platform",
+        "version": "1.0.0-rc2-3002702"
+    },
+    "NEST": "2.3.3",
+    "Newtonsoft.Json": "9.0.1-beta1",
+    "Sixeyed.BadApi.Model": "1.0.0-*",
+    "StackExchange.Redis": "1.1.604-alpha"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  }
+}

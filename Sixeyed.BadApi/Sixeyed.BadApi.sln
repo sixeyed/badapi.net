@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.BadApi.Web", "Sixeyed.BadApi.Web\Sixeyed.BadApi.Web.csproj", "{ECF44704-A4AE-4B6F-8B26-9DEC4692944C}"
 EndProject
@@ -15,6 +15,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3633FA9A-A7DC-4D60-8D87-91DB1364D6BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.BadApi.AcceptanceTests", "Sixeyed.BadApi.AcceptanceTests\Sixeyed.BadApi.AcceptanceTests.csproj", "{7D7F3BF6-55C5-439A-90E4-85DE39813086}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sixeyed.BadApi.Model", "Sixeyed.BadApi.Model\Sixeyed.BadApi.Model.xproj", "{446A9808-55AA-4CEC-8612-B602124E06D8}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sixeyed.BadApi.WebApi", "Sixeyed.BadApi.WebApi\Sixeyed.BadApi.WebApi.xproj", "{F6F5E9D0-4ACD-4319-A2D3-DCA3D1F176E3}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sixeyed.BadApi.Indexer", "Sixeyed.BadApi.Indexer\Sixeyed.BadApi.Indexer.xproj", "{25D77E36-A666-4FEE-821D-F48F2B8CFE82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNetCore", "DotNetCore", "{93B6337B-FF81-45CF-A877-1BD0381C17C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,11 +38,26 @@ Global
 		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D7F3BF6-55C5-439A-90E4-85DE39813086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446A9808-55AA-4CEC-8612-B602124E06D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446A9808-55AA-4CEC-8612-B602124E06D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446A9808-55AA-4CEC-8612-B602124E06D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446A9808-55AA-4CEC-8612-B602124E06D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F5E9D0-4ACD-4319-A2D3-DCA3D1F176E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F5E9D0-4ACD-4319-A2D3-DCA3D1F176E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F5E9D0-4ACD-4319-A2D3-DCA3D1F176E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F5E9D0-4ACD-4319-A2D3-DCA3D1F176E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D77E36-A666-4FEE-821D-F48F2B8CFE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D77E36-A666-4FEE-821D-F48F2B8CFE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D77E36-A666-4FEE-821D-F48F2B8CFE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D77E36-A666-4FEE-821D-F48F2B8CFE82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7D7F3BF6-55C5-439A-90E4-85DE39813086} = {3633FA9A-A7DC-4D60-8D87-91DB1364D6BA}
+		{446A9808-55AA-4CEC-8612-B602124E06D8} = {93B6337B-FF81-45CF-A877-1BD0381C17C7}
+		{F6F5E9D0-4ACD-4319-A2D3-DCA3D1F176E3} = {93B6337B-FF81-45CF-A877-1BD0381C17C7}
+		{25D77E36-A666-4FEE-821D-F48F2B8CFE82} = {93B6337B-FF81-45CF-A877-1BD0381C17C7}
 	EndGlobalSection
 EndGlobal
